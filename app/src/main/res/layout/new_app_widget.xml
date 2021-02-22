@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_section_transparent"
+    android:padding="@dimen/widget_margin"
+    android:theme="@style/ThemeOverlay.BroadcastReceiver.AppWidgetContainer">
+
+    <LinearLayout
+        android:id="@+id/section_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_section_white"
+        android:padding="8dp"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:textColor="#5E5E5E"
+            android:text="Widget ID"/>
+
+        <TextView
+            android:id="@+id/appwidget_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:text="0"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_orange_dark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/section_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/section_id"
+        android:background="@drawable/bg_section_white"
+        android:padding="8dp"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#5E5E5E"
+            android:text="Last Update"/>
+
+        <TextView
+            android:id="@+id/appwidget_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_orange_dark"
+            android:text="X"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_update"
+        android:layout_centerHorizontal="true"
+        android:text="Update Now"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/white"
+        android:stateListAnimator="@null"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"/>
+</RelativeLayout>
